@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link
+            rel="shortcut icon"
+            href="./src/img/preflixicon.png"
+            type="image/x-icon"
+            sizes="32x32"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <title>PreFlix - Slimb Project</title>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: 'Poppins', sans-serif;
+                box-sizing: border-box;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            .container {
+                max-width: 1120px;
+                margin: 0 40px;
+            }
+            body {
+                overflow-x: hidden;
+            }
+
+
+            /* Jumbotron */
+            .jumbotron {
+                overflow: hidden;
+                height: 100vh;
+                text-align: center;
+                width: 100vw;
+            }
+            .jumbotron .carousel {
+                position: relative;
+                width: 500%;
+                left: 0;
+                animation: 20s carousel infinite;
+            }
+            .jumbotron .carousel img {
+                width: 20%;
+                float: left;
+            }
+            @keyframes carousel {
+                0% {
+                    left: 0;
+                }
+                20% {
+                    left: 0;
+                }
+                25% {
+                    left: -100%;
+                }
+                45% {
+                    left: -100%;
+                }
+                50% {
+                    left: -200%;
+                }
+                70% {
+                    left: -200%;
+                }
+                75% {
+                    left: -300%;
+                }
+                95% {
+                    left: -300%;
+                }
+                100% {
+                    left: -400%;
+                }
+            }
+
+            .jumbotron .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                background-color: rgba(0, 0, 0, 0.463);
+            }
+            .jumbotron .container {
+                position: absolute;
+                z-index: 10;
+                top: 50%;
+                left: 48%;
+                transform: translate(-50%, -50%);
+                color: white;
+            }
+            .jumbotron .container form{
+                background: rgba(0, 0, 0, 0.584);
+                width: 688px;
+                text-align: left;
+                height: 550px;
+                border-radius: 10px;
+            }
+            .jumbotron .container form .top{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .jumbotron .container form .top h1{
+                margin-top: 20px;
+                font-size: 30px;
+            }
+            .jumbotron .container .name,
+            .jumbotron .container .account
+            {
+                display: flex;
+            }
+            .jumbotron .container .name .form-group,
+            .jumbotron .container .account .form-group
+            {
+                margin: 10px;
+            }
+
+            .jumbotron .container form .name input,
+            .jumbotron .container form .account input  
+            {
+                background: rgba(75, 75, 75, 0.495) ;
+                border: none;
+                outline: none;
+                border-radius: 2px;
+                width: 300px;
+                padding: 12px 15px;
+                color: white;
+                text-align: left;
+            }
+            .jumbotron .container form .bottom{
+                display: flex;
+                flex-direction: column;
+                margin-left: 32px;
+            }
+            .jumbotron .container form .gender .form-group{
+                margin-bottom: 10px;
+                margin-right: 20px;
+            }
+            .jumbotron .container form .gender .form-group:nth-child(2) .form-dropdown{
+                width: 300px;
+                height: 30px;
+            }
+            .jumbotron .container form .bottom textarea{
+                width: 620px;
+                resize: none;
+                height: 70px;
+            }
+            .jumbotron .form .button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .jumbotron .form form button {
+                color: white;
+                background: red;
+                font-size: 12px;
+                font-weight: 700;
+                padding: 12px 55px;
+                margin: 20px;
+                border-radius: 10px;
+                border: 1px solid red;
+                outline: none;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                transition: transform 80ms ease-in;
+                cursor: pointer;
+            }
+            .jumbotron .form form button:active {
+                transform: scale(0.90);
+            }
+
+            /* footer */
+            footer.footer {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                background: black;
+                color: white;
+            }
+            .footer a {
+                color: white;
+            }
+            .footer .container {
+                display: flex;
+                align-items: flex-start;
+            }
+            .footer .container .top-fot {
+                display: flex;
+                align-items: flex-start;
+                flex-direction: column;
+                margin: 50px 90px;
+            }
+            .footer .container .top-fot a {
+                margin-bottom: 10px;
+                font-weight: 300;
+                text-decoration: none;
+            }
+            .footer .container .top-fot .sosmed a i {
+                font-size: 30px;
+                margin-right: 15px;
+            }
+            .footer .container .top-fot h2 {
+                margin-bottom: 10px;
+            }
+            .footer .container .top-fot .sosmed a i.fa-facebook {
+                color: blue;
+            }
+            .footer .container .top-fot .sosmed a i.fa-instagram {
+                color: rgb(220, 99, 99);
+            }
+            .footer .container .top-fot .sosmed a i.fa-twitter {
+                color: rgb(103, 103, 255);
+            }
+            .footer .container .top-fot .sosmed a i.fa-youtube {
+                color: red;
+            }
+            .footer .container .top-fot a img {
+                width: 180px;
+            }
+            .footer .copy {
+                height: 60px;
+            }
+            .footer .copy a {
+                text-decoration: none;
+                margin-bottom: 40px;
+            }
+            .footer .copy a:hover {
+                color: rgb(144, 77, 77);
+            }
+        </style>
+    </head>
+    <body>
+        <section class="jumbotron">
+            <div class="carousel">
+                <img src="../src/img/sign-up/conjuringbanner.jpg" alt="listfilmbanner"/>
+                <img src="../src/img/sign-up/exorcistbanner.png" alt="exorcistbanner"/>
+                <img src="../src/img/sign-up/lsfilmbanner.jpg" alt="openheimerbanner"/>
+                <img src="../src/img/sign-up/tsmbrosbanner.jpg" alt="supermariobanner"/>
+                <img src="../src/img/sign-up/conjuringbanner.jpg" alt="listfilmbanner"/>
+            </div>
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="form">
+                    <div class="sign-up" id="sign-up">
+                        <form id="survey-form" action="./user/index.html" target="content">
+                            <div class="top">
+                                <h1>Sign Up</h1>
+                                <div class="name">
+                                    <div class="form-group">
+                                        <label id="name-label" for="firstname">First Name</label>
+                                        <br>
+                                        <input
+                                            id="firstname"
+                                            type="text"
+                                            name="firstname"
+                                            placeholder="Enter your first name"
+                                            class="form-control"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="name-label" for="firstname">Last Name</label>
+                                        <br>
+                                        <input
+                                            id="lasttname"
+                                            type="text"
+                                            name="lastname"
+                                            placeholder="Enter your last name"
+                                            class="form-control"
+                                            required="required">
+                                    </div>
+                                </div>
+                                <div class="account">
+                                    <div class="form-group">
+                                        <label id="email-label" for="email">Email</label>
+                                        <br>
+                                        <input
+                                            id="email"
+                                            type="email"
+                                            name="email"
+                                            placeholder="Enter your Valid Email"
+                                            class="form-control"
+                                            required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <label id="pwd-label" for="password">Create Password</label>
+                                        <br>
+                                        <input
+                                            id="password"
+                                            type="password"
+                                            name="password"
+                                            placeholder="Create your password 8 digit"
+                                            class="form-control"
+                                            required="required">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <div class="gender">
+                                    <div class="form-group">
+                                        <p>Gender</p>
+                                        <label>
+                                            <input required type="radio" name="gender"> Male
+                                        </label>
+                                        <label>
+                                            <input required type="radio"name="gender"> Female
+                                        </label>
+                                    </div>
+                                    <div class="form-group">
+                                        <p>Favorite Genre?</p>
+                                          <select id="dropdown" class="form-dropdown" required>
+                                            <option disabled="">Select an option</option>
+                                            <option>Action</option>
+                                            <option>Horror</option>
+                                            <option>Comedy</option>
+                                            <option>SC-Fi</option>
+                                            <option>Romance</option>
+                                            <option>Fantasy</option>
+                                            <option>Anime</option>
+                                          </select>
+                                      </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="checkbox" required> Verification</input>
+                                    <br>
+                                    <textarea
+                                        id="verification"
+                                        class="input-textarea"
+                                        name="verification"
+                                        required
+                                        placeholder="Enter this text to human verification : 'Preflix' "></textarea>
+                                </div>
+                            </div>
+                            <div class="button">
+                                <button id="signup" type="submit" class="submit-button">Sign Up</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="top-fot">
+                    <a href="../index.html"><img src="../src/img/preflix.png"alt="PreFlix Logo"/></a>
+                    <p>Best Movie Portal by SLIMB</p>
+                </div>
+                <div class="top-fot">
+                    <h2>Useful Links</h2>
+                    <a href="#footer">Account</a>
+                    <a href="#footer">Payment</a>
+                    <a href="#footer">Help Center</a>
+                    <a href="#footer">Redem Code</a>
+                </div>
+                <div class="top-fot">
+                    <h2>Follow us</h2>
+                    <div class="sosmed">
+                        <a href="#footer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <a href="#">Copyright &copy 2023 - PreFlix by SLIMB
+                </a>
+            </div>
+
+        </footer>
+        <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+    </body>
+</html>

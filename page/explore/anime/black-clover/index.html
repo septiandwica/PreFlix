@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Spider-Man: Across the Spider-Verse</title>
+        <link rel="stylesheet" href="./main.css"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+            rel="stylesheet"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+            <style>
+                .trailler {
+                    position: fixed;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 1000;
+                    top: 0;
+                    left: 0;
+                    background-color: rgba(0, 0, 0, 0.7);
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: all 0.5s;
+                }
+                .trailler .content {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%) scale(0.25);
+                    width: 900px;
+                    height: 506px;
+                    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+                    background-color: #fff;
+                    border-radius: 8px;
+                    overflow: hidden;
+                }
+        
+                .close,
+                .close:link,
+                .close:visited {
+                    color: #ccc;
+                    text-decoration: none;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-size: 40px;
+                    display: inline-block;
+                    line-height: 1;
+                    transition: all 0.2s;
+                }
+                .close:hover {
+                    color: rgb(155, 0, 0);
+                }
+                .trailler:target {
+                    opacity: 1;
+                    visibility: visible;
+                }
+                .trailler:target .content {
+                    opacity: 1;
+                    transform: translate(-50%, -50%) scale(1);
+                }
+                @media screen and (max-width: 968px) {
+                    .trailler .content{
+                     width: 640px;
+                    height: 360px;
+                    }
+                }
+                @media screen and (max-width: 645px) {
+                    .trailler .content{
+                     width: 400px;
+                    height: 225px;
+                    }
+                }
+            </style>
+    </head>
+
+    <body>
+        <section class="detail">
+            <div class="container">
+                <div class="poster-wrapper">
+                    <div class="poster">
+                        <img src="assets/bg.jpg" alt=""/>
+                    </div>
+                    <form action="#trailler">
+                        <button type="submit" class="submit-button">
+                            <i class="fa-regular fa-circle-play"></i>Watch Now</button>
+                    </form>
+                    <div id="trailler" class="trailler">
+                        <div class="content">
+                            <a href="./index.html" class="close">&Cross;</a>
+                            <iframe
+                                width="100%" height="100%"
+                                src="https://www.youtube.com/embed/EZOToP8xLPg?si=mVdUslYLjZYLOYkI?autoplay=0&showinfo=0"
+                                frameborder="0"
+                                allowfullscreen="allowfullscreen"></iframe>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="info">
+                    <div class="movie-title">Black Clover: Sword of the Wizard King</div>
+                    <div class="movie-detail">
+                        <div class="set">
+                            <label>Release Date</label>
+                            <span>Jul 16, 2023</span>
+                        </div>
+                        <div class="set">
+                            <label>Running time</label>
+                            <span>113m</span>
+                        </div>
+                        <div class="set">
+                            <label>Genre</label>
+                            <span>Anime</span>
+                        </div>
+                        <div class="set">
+                            <label>MAL Rating</label>
+                            <span>
+                                <i class="fas fa-star" style="margin-right:10px ;"></i>8.8 / 10</span>
+                        </div>
+                    </div>
+                    <div class="movie-description">
+                        As a lionhearted boy who can’t wield magic strives for the title of Wizard King, four banished Wizard Kings of yore return to crush the Clover Kingdom.
+                    </div>
+                    <div class="movie-cast">
+                        <div class="header">Voice Cast</div>
+                        <table>
+                            <tr>
+                                <td >
+                                    <div class="cast" style="margin: 10px;">
+                                        <img src="assets/Kajiwara, Gakuto.jpg" alt=""/>
+                                        <label>Kajiwara, Gakuto</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cast" style="margin: 10px;">
+                                        <img src="assets/Shizamaki, Nobunaga.jpg" alt=""/>
+                                        <label>Shizamaki, Nobunaga</label>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div class="cast" style="margin: 10px;">
+                                        <img src="assets/Subawa, Junichi.jpg" alt=""/>
+                                        <label>Suwabe, Junichi</label>
+                                    </div>
+
+                                </td>
+                                <td>
+                                    <div class="cast" style="margin: 10px;">
+                                        <img src="assets/Yuki, Kana.jpg" alt=""/>
+                                        <label>Yuuki, Kana</label>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="cast" style="margin: 10px;">
+                                        <img src="assets/Minagawa, Junko.jpg" alt=""/>
+                                        <label>Minigawa, Junko</label>
+                                    </div>
+
+                                </td>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="movielist" class="movielist">
+                <div class="container">
+                    <div class="col">
+                        <div class="title">
+                            <h2>Recomendation</h2>
+                        </div>
+                        <div class="list fall-season">
+                            <div class="card-anime">
+                                <a href="../classroom-of-elite/index.html" target="content">
+                                    <img src="../classroom-of-elite/assets/bg.jpg" alt="">
+                                    <h6>Classroom Of Elite</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>8.8</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../jujutsu-kaisen/index.html" target="content">
+                                    <img src="../jujutsu-kaisen/assets/bg.jpg" alt="">
+                                    <h6>Interstellar</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>8.7</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2014</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../dead-mount/index.html" target="content">
+                                    <img src="../dead-mount/assets/bg.jpg" alt="">
+                                    <h6>Dead Mount Death Play</h6>
+                                    <div class="detail">
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../action/F9/F9.html" target="content">
+                                    <img src="../../action/F9/Assets/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.jpg" alt="">
+                                    <h6>F9</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../comedy/madagascar/detail.html" target="content">
+                                    <img src="../../comedy/madagascar/img/MADAGASKAR 2005.jpg" alt="">
+                                    <h6>Madagascar 2005</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../horror/Halloween/Ween.html" target="content">
+                                    <img src="../../horror/Halloween/Assets/Halloween_II.jpg" alt="">
+                                    <h6>Halloween II</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../sc-fi/1spideracross/index.html" target="content">
+                                    <img src="../../sc-fi/1spideracross/assets/poster.jpg" alt="">
+                                    <h6>
+                                        Spider-Man: Across the Spider-Verse</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../fantasy/4thewizard/index.html" target="content">
+                                    <img src="../../fantasy/4thewizard/assets/poster.jpg" alt="">
+                                    <h6>The Wizard</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../../action/MoneyHeist/Moneyheist.html" target="content">
+                                    <img src="../../action/MoneyHeist/Assets/MV5BODI0ZTljYTMtODQ1NC00NmI0LTk1YWUtN2FlNDM1MDExMDlhXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_FMjpg_UX1000_.jpg" alt="">
+                                    <h6>Money Heist</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="card-anime">
+                                <a href="../kage-no/index.html" target="content">
+                                    <img src="../kage-no/assets/bg.jpg" alt="">
+                                    <h6>The Eminence in Shadow</h6>
+                                    <div class="detail">
+
+                                        <ul style="display: flex; align-items: center;">
+                                            <li>
+                                                <p style="margin-right: 10px;">
+                                                    <i class="fas fa-star"></i>7.2</p>
+                                            </li>
+                                            <li>
+                                                <p
+                                                    style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </body>
+    </html>

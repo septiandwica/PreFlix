@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Preflix</title>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(73, 73, 73);
+    border-radius: 20px;
+  }
+:root{
+    --primary: #000000;
+    --second: #CF0A0A;
+    --third: #DC5F00;
+    --four: #EEEEEE;
+  }
+body{
+    overflow-x: hidden;
+}
+.jumbotron .container{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.jumbotron  .content{
+    text-align: center;
+}
+.jumbotron .content::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.jumbotron .content h1{
+    font-size: 70px;
+    color: #fff;
+    margin-bottom: 50px;
+}
+
+
+.jumbotron button {
+  color: white;
+  background: red;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 12px 55px;
+  border-radius: 10px;
+  border: 1px solid red;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+.jumbotron button:active {
+  transform: scale(0.90);
+}
+
+
+.jumbotron  .background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .jumbotron  .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .jumbotron  .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+.movielist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 10px 20px 40px 20px;
+    overflow-x: hidden;
+}
+.movielist .container .title h2 {
+    margin: 20px 0px 10px 60px;
+} 
+.movielist .container ul{
+  display: flex;
+  justify-content: space-between;
+}
+.movielist .container h6{
+  font-size: 18px;
+  color: var(--four);
+}
+.movielist .container ul li{
+  list-style: none;
+}
+.movielist .container a{
+  text-decoration: none;
+  font-size: 14px;
+  }
+.movielist .container ul li{
+color: var(--four);
+margin-right: 10px;
+}
+
+.movielist .container p i{
+color: yellow;
+font-size: 14px;
+margin-right: 5px;
+}
+  .movielist .container .col {
+    display: flex;
+    flex-direction: column;
+    max-width: 1300px;
+    margin-bottom: 30px;
+  }
+  .movielist .container .col .list {
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+  }
+  .movielist .container .col .list .card-anime a img {
+    width: 200px;
+    margin: 0px 20px 5px 0px;
+    height: 300px;
+    border-radius: 5px;
+  }
+  .movielist .container .col .list::-webkit-scrollbar {
+    width: 2px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .movielist .container .col .list::-webkit-scrollbar-thumb {
+    width: 2px;
+    height: 2px;
+    background-color: red;
+  }
+
+  .card-anime button {
+  color: white;
+  background: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  border: 1px solid red;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+.card-anime button:active {
+  transform: scale(0.90);
+}
+  @media screen and (max-width: 1440px) {
+    .movielist .container .col {
+      max-width: 1080px;
+    }
+  }
+  @media screen and (max-width: 1280px) {
+    .movielist .container .col {
+      max-width: 780px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 180px;
+      height: 260px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .movielist .container .col {
+      max-width: 520px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 160px;
+      height: 240px;
+      margin: 0px 15px 5px 0px;
+    }
+  }
+  @media screen and (max-width: 645px) {
+    .movielist .container .col {
+      max-width: 400px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 120px;
+      height: 180px;
+    }
+    .movielist .container .title h3 {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 445px) {
+    .movielist .container .col {
+      max-width: 320px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 100px;
+      height: 145px;
+      margin: 0px 10px 5px 0px;
+    }
+    .movielist .container .title h3 {
+      font-size: 14px;
+    }
+  }
+
+
+    </style>
+</head>
+<body>
+    <section class="jumbotron">
+        <div class="container">
+            <video autoplay loop plays-inline class="background-clip">
+                <source src="./movie/jjk.mp4" sizes="100%" type="video/mp4">
+            </video>
+            <div class="content">
+                <form action="#movielist">
+                    <h1>Explore More</h1>
+                    <button action="../index.html" type="submit" class="submit-button"><i class="fa-regular fa-circle-play"></i>Discover</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="movielist" class="movielist">
+        <div class="container">
+            <div class="col">
+                <div class="title">
+                    <h3>Most Popular</h3>
+                </div>
+                <div class="list most">
+                    <div class="card-anime">
+                        <a href="./mostpopular/Reptile/index.html" target="content">
+                            <img src="../home/mostpopular/Reptile/assets/bg.webp" alt="">
+                            <h5 style="color: rgb(255, 234, 0); font-weight: 700; font-size: 24px;  top: 105.6%; left: 10% ;">#1</h5>
+                            <h6>Reptile</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.3</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/fairplay/index.html" target="content">
+                            <img src="../home/mostpopular/fairplay/assets/bg.webp" alt="">
+                            <h5 style="color: rgb(255, 234, 0); font-weight: 700; font-size: 24px;  top: 105.6%; left: 10% ;">#2</h5>
+                            <h6>Fair Play</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.6</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/totallykiller/index.html" target="content">
+                            <img src="../home/mostpopular/totallykiller/assets/bg.webp" alt="">
+                            <h5 style="color: rgb(255, 234, 0); font-weight: 700; font-size: 24px;  top: 105.6%; left: 10% ;">#3</h5>
+                            <h6>Totally Killer</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.3</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/theexorcist/index.html" target="content">
+                            <img src="../home/mostpopular/theexorcist/assets/bg.webp" alt="">
+                            <h6>The Exorcist: Believer</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>5.1</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/thecreator/index.html" target="content">
+                            <img src="../home/mostpopular/thecreator/assets/bg.webp" alt="">
+                            <h6>The Creator</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>7.1</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/hauntedmainsion/index.html" target="content">
+                            <img src="../home/mostpopular/hauntedmainsion/assets/bg.webp" alt="">
+                            <h6>Haunted Mansions</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.1</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/theironclaw/index.html" target="content">
+                            <img src="../home/mostpopular/theironclaw/assets/bg.webp" alt="">
+                            <h6>The Iron Claw</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire"></i>10</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/mission/index.html" target="content">
+                            <img src="../home/mostpopular/mission/assets/bg.webp" alt="">
+                            <h6>Mission: Impossible - Dead Reckoning Part One</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>7.8</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/fivenights/index.html" target="content">
+                            <img src="../home/mostpopular/fivenights/assets/bg.webp" alt="">
+                            <h6>Five Nights At Freddy's</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire"></i>13</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./mostpopular/barbie/index.html" target="content">
+                            <img src="../home/mostpopular/barbie/assets/bg.webp" alt="">
+                            <h6>Barbie</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>7.0</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h3>Upcoming Movie</h3>
+                </div>
+                <div class="list popular">
+                    <div class="card-anime">
+                        <a href="./upcoming/killers/index.html" target="content">
+                            <img src="../home/upcoming/killers/assets/bg.webp" alt="">
+                            <h6>Killer Of The FLower Moon</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.2</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/themarvels/index.html" target="content">
+                            <img src="../home/upcoming/themarvels/assets/bg.webp" alt="">
+                            <h6>The Marvels</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire"></i>101</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/nectgoal/index.html" target="content">
+                            <img src="../home/upcoming/nectgoal/assets/bg.webp" alt="">
+                            <h6>Next Goal Wins</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.0</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/thehunger/index.html" target="content">
+                            <img src="../home/upcoming/thehunger/assets/bg.webp" alt="">
+                            <h6>The Hungers Games: The Ballad of songbirds and snakes</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire" style="color: white;"></i>95</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/napoleon/index.html" target="content">
+                            <img src="../home/upcoming/napoleon/assets/bg.webp" alt="">
+                            <h6>Napoleon</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire"></i>100</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/poorthings/index.html" target="content">
+                            <img src="../home/upcoming/poorthings/assets/bg.webp" alt="">
+                            <h6>Poor Things</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.5</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/wonka/index.html" target="content">
+                            <img src="../home/upcoming/wonka/assets/bg.webp" alt="">
+                            <h6>Wonka</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire"></i>37</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/aquaman/index.html" target="content">
+                            <img src="../home/upcoming/aquaman/assets/bg.webp" alt="">
+                            <h6>Aquaman The Lost Kingdom</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire" ></i>211</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/rebel/index.html" target="content">
+                            <img src="../home/upcoming/rebel/assets/bg.webp" alt="">
+                            <h6>Rebel Moon</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-fire" style="color: white;"></i>495</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="./upcoming/Ferrari/index.html" target="content">
+                            <img src="../home/upcoming/Ferrari/assets/bg.webp" alt="">
+                            <h6>Ferrari</h6>
+                            <div class="detail">
+
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>6.8</p>
+                                    </li>
+                                    <li>
+                                        <p
+                                            style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h3>Genre: Anime</h3>
+                </div>
+                <div class="list genre-anime">
+                    <div class="card-anime">
+                        <a href="../explore/anime/black-clover/index.html" target="content">
+                            <img src="../explore/anime/black-clover/assets/bg.jpg" alt="">
+                            <h6>Black Clover: Sword of the Wizard King</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.1</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/anime/chainsaw-man/index.html" target="content">
+                            <img src="../explore/anime/chainsaw-man/assets/bg.jpg" alt="">
+                            <h6>Chainsaw Man</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.5</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2022</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/anime/classroom-of-elite/index.html" target="content">
+                            <img src="../explore/anime/classroom-of-elite/assets/bg.jpg" alt="">
+                            <h6>Classroom Of Elite</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>7.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2017</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/anime/dead-mount/index.html" target="content">
+                            <img src="../explore/anime/dead-mount/assets/bg.jpg" alt="">
+                            <h6>Dead Mount Death Play</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>7.3</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/anime/dr.stone/index.html" target="content">
+                            <img src="../explore/anime/dr.stone/assets/bg.jpg" alt="">
+                            <h6>Dr. Stone: New World</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.2</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2023</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="card-anime">
+                        <form action="../explore/anime/movie-list.html">
+                            <button type="submit" class="submit-button"><i class="fa-regular fa-circle-play"></i>More</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col">
+                <div class="title">
+                    <h3>Genre: Action</h3>
+                </div>
+                <div class="list genre-anime">
+                    <div class="card-anime">
+                        <a href="../explore/action/F9/F9.html" target="content">
+                            <img src="../explore/action/F9/Assets/MV5BMjI0NmFkYzEtNzU2YS00NTg5LWIwYmMtNmQ1MTU0OGJjOTMxXkEyXkFqcGdeQXVyMjMxOTE0ODA@._V1_FMjpg_UX1000_.jpg" alt="">
+                            <h6>F9</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/action/GranTurismo/Gran.html" target="content">
+                            <img src="../explore/action/GranTurismo/Assets/MV5BMTI1YjFmN2UtOWZhOC00MjkwLTg2ZjgtNDQ5NDQ3YWNmNGRkXkEyXkFqcGdeQXVyMTAxNzQ1NzI@._V1_.jpg" alt="">
+                            <h6>Gran Turismo</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/action/High&Low/Highlow.html" target="content">
+                            <img src="../explore/action/High&Low/Assets/MV5BMTRhMmJmMmYtZjMzZS00YjY5LWE2MWMtZTc4Mjk4NWE3Njc4XkEyXkFqcGdeQXVyMzI2NzE3MDc@._V1_.jpg" alt="">
+                            <h6>High&Low: The Worst X</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../explore/action/Lupin/Lupin.html" target="content">
+                            <img src="../explore/action/Lupin/Assets/lupin_xlg.jpg" alt="">
+                            <h6>Lupin</h6>
+                            <div class="detail">
+                                
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="card-anime">
+                        <a href="../action/MoneyHeist/Moneyheist.html" target="content">
+                            <img src="../explore/action/MoneyHeist/Assets/MV5BODI0ZTljYTMtODQ1NC00NmI0LTk1YWUtN2FlNDM1MDExMDlhXkEyXkFqcGdeQXVyMTM0NTUzNDIy._V1_FMjpg_UX1000_.jpg" alt="">
+                            <h6>Money Heist</h6>
+                            <div class="detail">
+                                <ul style="display: flex; align-items: center;">
+                                    <li>
+                                        <p style="margin-right: 10px;">
+                                            <i class="fas fa-star"></i>8.8</p>
+                                    </li>
+                                    <li>
+                                        <p style="margin-right: 10px; background-color: rgba(234, 234, 234, 0.182); border-radius: 8px; padding: 2px 5px;">2010</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <div class="card-anime">
+                        <form action="../explore/action/movie-list.html">
+                            <button type="submit" class="submit-button"><i class="fa-regular fa-circle-play"></i>More</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

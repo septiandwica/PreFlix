@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+:root{
+  --primary: #000000;
+  --second: #CF0A0A;
+  --third: #DC5F00;
+  --four: #EEEEEE;
+  }
+  ::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: black;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: rgb(36, 36, 36);
+    border-radius: 20px;
+    }
+body{
+    overflow-x: hidden;
+}
+.jumbotron .container{
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+}
+
+.jumbotron  .content{
+  text-align: left;
+  margin: 250px 0px 0px 70px;
+  width: 750px;
+}
+.jumbotron .content::before{
+  content: "";
+  width: 100%;
+  position: absolute;
+  height: 100vh;
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0));
+}
+
+.jumbotron .content h1{
+    font-size: 40px;
+    color: var(--four);
+}
+.jumbotron .content ul li:nth-child(1){
+  list-style: none;
+}
+.jumbotron .content ul li{
+  color: var(--four);
+  margin-right: 20px;
+}
+
+.jumbotron .content p i{
+  color: yellow;
+  margin-right: 5px;
+}
+.jumbotron .content p.synopsis{
+  color: var(--four);
+  margin-bottom: 20px;
+}
+.jumbotron .content p.genre{
+  color: rgb(182, 182, 182);
+  margin-bottom: 10px;
+}
+.jumbotron button i{
+  margin-right: 10px;
+}
+.jumbotron button.submit-button{
+  color: white;
+  background: red;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px 40px;
+  border-radius: 10px;
+  border: 1px solid red;
+  outline: none;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  cursor: pointer;
+}
+.jumbotron button:active {
+  transform: scale(0.90);
+}
+
+.jumbotron  .background-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+@media (min-aspect-ratio:16/9) {
+    .jumbotron  .background-clip{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio:16/9) {
+    .jumbotron  .background-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+.movielist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 10px 20px 40px 20px;
+    overflow-x: hidden;
+}
+.movielist .container .title h2 {
+    margin: 20px 0px 10px 60px;
+} 
+.movielist .container ul{
+  display: flex;
+  justify-content: space-between;
+}
+.movielist .container h6{
+  font-size: 18px;
+  color: var(--four);
+}
+.movielist .container ul li{
+  list-style: none;
+}
+.movielist .container a{
+  text-decoration: none;
+  font-size: 14px;
+  }
+.movielist .container ul li{
+color: var(--four);
+margin-right: 10px;
+}
+
+.movielist .container p i{
+color: yellow;
+font-size: 14px;
+margin-right: 5px;
+}
+
+
+  .movielist .container .col {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    width: 90vw;
+  }
+  .movielist .container .col .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .movielist .container .col .list .card-anime{
+    margin: 0px 20px 90px 0px;
+    width: 200px;
+    height: 300px;
+  }
+  .movielist .container .col .list .card-anime a img {
+    width: 200px;
+    margin: 0px 20px 0px 0px;
+    height: 300px;
+    border-radius: 5px;
+  }
+  .movielist .container .col .list::-webkit-scrollbar {
+    width: 2px;
+    height: 3px;
+    background-color: #fff;
+  }
+  .movielist .container .col .list::-webkit-scrollbar-thumb {
+    width: 2px;
+    height: 2px;
+    background-color: red;
+  }
+  @media screen and (max-width: 1280px) {
+    .movielist .container .col {
+      max-width: 1080px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .movielist .container .col {
+      max-width: 780px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 180px;
+      height: 260px;
+    }
+  }
+  @media screen and (max-width: 645px) {
+    .movielist .container .col {
+      max-width: 520px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 160px;
+      height: 240px;
+      margin: 0px 15px 5px 0px;
+    }
+  }
+  @media screen and (max-width: 445px) {
+    .movielist .container .col {
+      max-width: 400px;
+    }
+    .movielist .container .col .list .card-anime a img {
+      width: 120px;
+      height: 180px;
+    }
+    .movielist .container .title h3 {
+      font-size: 18px;
+    }
+  }
+
+  .movielist button.submit-button{
+    color: white;
+    background: red;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 40px;
+    border-radius: 10px;
+    border: 1px solid red;
+    outline: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    cursor: pointer;
+  }
+  .movielist button:active {
+    transform: scale(0.90);
+  }

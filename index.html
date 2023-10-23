@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link
+            rel="shortcut icon"
+            href="./src/img/preflixicon.png"
+            type="image/x-icon"
+            sizes="32x32"/>
+        <link rel="stylesheet" href="./src/css/index/index.css"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+            integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <title>PreFlix - Slimb Project</title>
+    </head>
+    <style>
+        .trailler {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        .trailler .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.25);
+            width: 900px;
+            height: 506px;
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .trailler .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.25);
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .trailler .content .text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px;
+        }
+        .trailler .content .text i {
+            font-size: 80px;
+            color: red;
+        }
+        .close,
+        .close:link,
+        .close:visited {
+            color: #ccc;
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 40px;
+            display: inline-block;
+            line-height: 1;
+            transition: all 0.2s;
+        }
+        .close:hover {
+            color: rgb(155, 0, 0);
+        }
+        .trailler:target {
+            opacity: 1;
+            visibility: visible;
+        }
+        .trailler:target .content {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @media screen and (max-width: 968px) {
+            .trailler .content {
+                width: 450px;
+                height: 400px;
+            }
+            .top-right .lang-control{
+                display: none;
+            }
+            .top .top-left a img{
+    width: 100px;
+}
+.top-right button.submit-button{
+    padding: 8px 10px;
+}
+        }
+        @media screen and (max-width: 645px) {
+            .trailler .content {
+                width: 300px;
+                height: 450px;
+            }
+        }
+        button.submit-button {
+            color: white;
+            background: red;
+            font-size: 14px;
+            font-weight: 700;
+            padding: 12px 18px;
+            border-radius: 10px;
+            border: 1px solid red;
+            outline: none;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: transform 80ms ease-in;
+            cursor: pointer;
+            margin: 10px;
+        }
+        button:active {
+            transform: scale(0.90);
+        }
+
+    </style>
+    <body>
+        <nav>
+            <div class="top">
+                <div class="top-left">
+                    <a href="../index.html"><img src="./src/img/preflix.png" alt="PreFlix Logo"/></a>
+                </div>
+                <div class="top-right">
+                    <select id="dropdown" class="lang-control">
+                        <option disabled="disabled">Select your language</option>
+                        <option>English</option>
+                        <option>Bahasa Indonesia</option>
+                    </select>
+                    <form action="#trailler">
+                        <button type="submit" class="submit-button">SIGN UP</button>
+                    </form>
+                    <div id="trailler" class="trailler">
+                        <div class="content">
+                            <a href="./index.html" class="close">&Cross;</a>
+                            <div class="text">
+                                <i class="fas fa-triangle-exclamation" style="margin: 10px;"></i>
+                                <h2 style="color: red;">Warning</h2>
+                                <p style="text-align: justify; margin-top: 8px; margin-bottom: 8px;">
+
+                                    Make sure you use a <b>Desktop</b> to access this website. The website not responsive
+                                    on smartphones. Click Yes to continue and confirm!</p>
+                                <div class="btn">
+                                    <a class="btn" href="./home-app.html" style="background-color: red;">YES
+                                    </a>
+                                    <a class="btn" href="#" style="background-color: black;" >NO
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <section class="jumbotron">
+            <div class="carousel">
+                <img src="./src/img/sign-up/conjuringbanner.jpg" alt="listfilmbanner"/>
+                <img src="./src/img/sign-up/exorcistbanner.png" alt="exorcistbanner"/>
+                <img src="./src/img/sign-up/conjuringbanner.jpg" alt="openheimerbanner"/>
+                <img src="./src/img/sign-up/tsmbrosbanner.jpg" alt="supermariobanner"/>
+                <img src="./src/img/sign-up/conjuringbanner.jpg" alt="listfilmbanner"/>
+            </div>
+            <div class="overlay"></div>
+            <div class="container tagline">
+                <h1>Best Film Portal: Watch, Feel and Share Your Interests.</h1>
+                <p>Ready to watch? Only IDR49,999. Cancel anytime.</p>
+                <form action="#trailler">
+                    <button type="submit" class="submit-button">Get started <i class="fas fa-chevron-right"></i></button>
+                </form>
+                <div id="trailler" class="trailler">
+                    <div class="content">
+                        <a href="./index.html" class="close">&Cross;</a>
+                        <div class="text">
+                            <i class="fas fa-triangle-exclamation" style="margin: 10px;"></i>
+                            <h2 style="color: red;">Warning</h2>
+                            <p style="text-align: justify; margin-top: 8px; margin-bottom: 8px;">
+
+                                Make sure you use a <b>Desktop</b> to access this website. The website not 
+                                responsive on smartphones. Click Yes to continue and confirm!</p>
+                            <div class="btn">
+                                <a class="btn" href="./home-app.html" style="background-color: red;">YES
+                                </a>
+                                <a class="btn" href="#" style="background-color: black;" >NO
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <section class="hero">
+            <div class="card">
+                <div class="img-hero">
+                    <dotlottie-player
+                        src="https://lottie.host/7241bf46-7969-4aea-9530-bb76d0451a20/ChqY7Fty6T.json"
+                        background="transparent"
+                        class="lotie"
+                        speed="0.5"
+                        style="width: 350px; height: 350px"
+                        direction="-1"
+                        bounce="bounce"
+                        loop="loop"
+                        autoplay="autoplay"></dotlottie-player>
+                </div>
+                <div class="tagline">
+                    <h1>Enjoy with the Family</h1>
+                    <p>Enjoy Cinema on Any Screen, While Relaxing!</p>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="tagline">
+                    <h1>Unlimited Cinema Exploration</h1>
+                    <p>Entertainment in Your Hand, Big Screen, or Anywhere!.</p>
+                </div>
+                <div class="img-hero">
+                    <img src="./src/img/sign-up/tv.png" alt="tv" width="500px"/>
+                </div>
+            </div>
+            <hr>
+            <div class="card">
+                <div class="img-hero">
+                    <img src="./src/img/sign-up/device.png" alt="device" width="500px"/>
+                </div>
+                <div class="tagline">
+                    <h1>Build your imagination</h1>
+                    <p>Light Up Your Life with Stories in just the palm of your hand.</p>
+                </div>
+            </div>
+        </section>
+        <hr>
+        <footer id="footer" class="footer">
+            <div class="container">
+                <div class="top-fot">
+                    <a href="#">
+                        <img src="./src/img/preflix.png" alt="PreFlix Logo"/></a>
+                    <p>Best Movie Portal by SLIMB</p>
+                </div>
+                <div class="top-fot">
+                    <h2>Useful Links</h2>
+                    <a href="#footer">Account</a>
+                    <a href="#footer">Payment</a>
+                    <a href="#footer">Help Center</a>
+                    <a href="#footer">Redem Code</a>
+                </div>
+                <div class="top-fot">
+                    <h2>Follow us</h2>
+                    <div class="sosmed">
+                        <a href="#footer">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#footer">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <a href="#">Copyright &copy 2023 - PreFlix by SLIMB
+                </a>
+            </div>
+
+        </footer>
+        <script
+            src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
+            type="module"></script>
+    </body>
+</html>

@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: black;
+    }
+    ::-webkit-scrollbar-thumb {
+    background-color: rgb(36, 36, 36);
+    border-radius: 20px;
+    }
+
+body{
+    height: 200vh;
+    font-family: 'Poppins',sans-serif;
+    background-color: black;
+}
+
+.header{
+    margin: 5% 5% 0 5%;
+    color: rgb(255, 0, 0);
+}
+
+.tutor{
+    color: white;
+    margin: 5% 20% 0 20%;
+    text-align: left;
+}
+
+.tutor ol li{
+    padding: 10px;
+}
+
+.tutor ol li a{
+    text-decoration: none;
+    color: red;
+}
+
+.meth{
+    color: red;
+    cursor: pointer;
+}
+
+.meth:hover + .method{
+    background-color: #303030 ;
+    margin-right: 70%;
+    border-radius: 10px;
+}
+
+.textplan{
+    color: white;
+    margin: 13% 20% 0 20%;
+}
+
+.plan{
+    color: white;
+    padding: 3% 3% 3% 3%;
+    background-color: #181818;
+    margin: 3% 25% 10% 25%;
+    border-radius: 10px;
+}
+
+.planchoose{
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.desc p, .desc1 p{
+    text-align: center;
+    margin: 2%;
+    cursor: pointer;
+    line-height: 50px;
+    padding: 2% 2% 5% 2%;
+    font-weight: lighter;
+}
+
+.desc{
+    transition: 0.3s;
+}
+
+.desc:hover{
+    background-color: #303030;
+    padding: 0 3% 4% 3%;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.desc:hover a{
+    color: red;
+    padding: 5px;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+.desc a{
+    text-align: center;
+    text-decoration: none;
+    color: #181818;
+    margin: 5% auto 5% auto;
+    border: 2px solid #181818;
+}
+
+.desc a:hover{
+    background-color: red;
+    color: white;
+}
+
+.button{
+    display: flex;
+    margin: 0 20% 0 0;
+    justify-content: right;
+}
+
+.home{
+    color: rgb(255, 255, 255);
+    padding: 1%;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.home:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 0, 0);
+}

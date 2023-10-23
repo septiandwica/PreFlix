@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: block;
+    width: 10px;
+    background-color: var(--primary);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(111, 111, 111);
+    border-radius: 20px;
+  }
+:root{
+    --primary: #000000;
+    --second: #CF0A0A;
+    --third: #DC5F00;
+    --four: #EEEEEE;
+}
+body{
+    background: var(--primary);
+}
+header, footer{
+    margin-left: 10px;
+}
+nav{
+    height: 100vh;
+    overflow-x: hidden;
+}
+nav a.navBar{
+    padding: 5px;
+    border-radius: 8px;
+}
+nav li.navBar{
+    padding: 5px;
+}
+
+nav a.navBar:hover, li.navBar:hover{
+    background: var(--third);
+    color: var(--four);
+}
+nav a.navBar:focus, li.navBar:focus, nav ul li>ul li:focus{
+    background: var(--third);
+    color: var(--four);
+}
+nav ul{
+    padding: 5px 0px 5px 10px;
+    margin-bottom: 10px;
+}
+nav ul li{
+    list-style: none;
+    font-weight: bold;
+    margin:  20px auto;
+    position: relative;
+    overflow: hidden;
+    line-height: 35px;
+    max-height: 35px;
+    transition: .5ms;
+    text-transform: capitalize;
+}
+nav ul li.user{
+    max-height: 200px;
+    max-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav ul li a {
+    text-decoration: none;
+    color: rgb(245, 245, 245);
+    font-weight: 400;
+}
+nav ul li a:hover{
+    color: var(--four);
+}
+nav ul li a:focus{
+    color: var(--four);
+}
+nav ul li a i{
+    width: 25px ;
+    padding: 5px;
+}
+nav ul li>ul{
+    padding: 1px;
+    margin: 0 0 0 25px;
+}
+nav ul li>ul li{
+    height: 25px;
+    line-height: 20px;
+    font-size: 15px;
+    padding: 1px 1px 1px 10px;
+    font-weight: 500;
+    border-left: 2px solid var(--four);
+    margin: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+nav ul li:hover{
+    background: initial;
+    max-height: 100%;
+}
+nav ul li a i.fa-chevron-down{
+    transform: rotate(270deg);
+}
+nav ul li a:hover i.fa-chevron-down{
+    transform: rotate(0deg);
+}

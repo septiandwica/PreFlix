@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* NavBar */
+nav{
+    position: absolute;
+    width: 100vw;
+    z-index: 100000;
+    height: 50px;
+}
+
+.top{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-left{
+    margin-left: 90px;
+}
+.top .top-left a img{
+    width: 180px;
+}
+.top-right .lang-control{
+    margin-right: 10px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 2px;
+    border: 2px solid rgba(255, 255, 255, 0.501);
+    color: white;
+    height: 42px;
+}
+.top-right .lang-control:focus option{
+    background: rgb(0, 0, 0);
+}
+.top-right{
+    display: flex;
+    align-items: center;
+    margin-right: 90px;
+}
+/* .top-right .btn{
+    padding: 10px 12px;
+    background-color: red;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: aliceblue;
+} */
+div.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.btn a{
+    margin: 10px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+/* Jumbotron */
+.jumbotron{
+    overflow: hidden;
+    height: 100vh;
+    text-align: center;
+    width: 100vw;
+}
+.jumbotron .carousel{
+    position: relative;
+    width: 500%;
+    left: 0;
+    animation: 20s carousel infinite;
+}
+.jumbotron .carousel img{
+    width: 20%;
+    float: left;
+}
+@keyframes carousel {
+    0%{
+        left: 0;
+    }
+    20%{
+        left:0;
+    }
+    25%{
+        left:-100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left:-400%;
+    }
+}
+
+.jumbotron .overlay {
+    position: absolute;
+    top: 0;
+    left: 0; 
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.463);
+  }
+.jumbotron .tagline{
+    z-index: 10;
+    width: 100vw;
+    color: white;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top: 50%;
+}
+.jumbotron .tagline h1{
+    font-size: 35px;
+}
+.jumbotron .tagline p{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width: 1280px) {
+    .hero .card{
+        flex-direction: column;
+    }
+    .hero .card img{
+        width: 350px;
+    }
+    .jumbotron .carousel img{
+        width: 20%;
+        height: 100vh;
+        object-fit: cover;
+    }
+    
+}
+@media screen and (max-width: 768px) {
+    .footer .container{
+        flex-direction: column;
+        justify-content: left;
+        align-items: start;
+    }
+    .hero .card img{
+        width: 200px;
+    }
+    .footer .container .top-fot a img{
+        width: 80px;
+    }
+    dotlottie-player{
+        width: 250px;
+        height: 250px;
+    }
+    .jumbotron .tagline h1{
+        font-size: 25px;
+    }
+    .jumbotron .tagline p{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 645px) {
+
+}
+@media screen and (max-width: 445px) {
+
+}
+
+/* hero */
+.hero::before{
+    z-index: 20000;
+    width: 500px;
+    background-color: yellow;
+    height: 100vh;
+}
+.hero{
+    background: black;
+    height: 100%;
+    width: 100vw;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.hero hr{
+    width: 100vw;
+    margin-top: 20px;
+}
+.hero .card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 550px;
+}
+.hero .card .img-hero{
+    margin: 20px;
+}
+.hero .card .tagline{
+    margin:40px;
+    width: 400px;
+}
+.hero .card .tagline h1{
+    font-size: 38px;
+}
+
+
+
+
+/* footer */
+footer.footer{
+    width:100vw ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: black;
+    color: white;
+}
+.footer a{
+    color: white;
+}
+.footer .container{
+    display: flex;
+    align-items: flex-start;
+}
+.footer .container .top-fot{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 50px 90px 50px 90px;
+}
+.footer .container .top-fot a{
+    margin-bottom: 10px;
+    font-weight: 300;
+    text-decoration: none;
+}
+.footer .container .top-fot .sosmed a i{
+    font-size: 30px;
+    margin-right: 15px;
+}
+.footer .container .top-fot h2{
+    margin-bottom: 10px;
+}
+.footer .container .top-fot .sosmed a i.fa-facebook{
+    color: blue;
+}
+.footer .container .top-fot .sosmed a i.fa-instagram{
+    color: rgb(220, 99, 99);
+}
+.footer .container .top-fot .sosmed a i.fa-twitter{
+    color: rgb(103, 103, 255);
+}
+.footer .container .top-fot .sosmed a i.fa-youtube{
+    color: red;
+}
+.footer .container .top-fot a img{
+    width: 180px;
+}
+.footer .copy{
+    height: 60px;
+}
+.footer .copy a{
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+.footer .copy a:hover{
+    color: rgb(144, 77, 77);
+}

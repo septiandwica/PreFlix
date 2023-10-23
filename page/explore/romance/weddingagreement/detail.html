@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Agreement</title>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .trailler {
+position: fixed;
+height: 100%;
+width: 100%;
+z-index: 1000;
+top: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.7);
+opacity: 0;
+visibility: hidden;
+transition: all 0.5s;
+}
+.trailler .content {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0.25);
+width: 900px;
+height: 506px;
+box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+background-color: #fff;
+border-radius: 8px;
+overflow: hidden;
+}
+
+.close,
+.close:link,
+.close:visited {
+color: #ccc;
+text-decoration: none;
+position: absolute;
+top: 0;
+right: 0;
+font-size: 40px;
+display: inline-block;
+line-height: 1;
+transition: all 0.2s;
+}
+.close:hover {
+color: rgb(155, 0, 0);
+}
+.trailler:target {
+opacity: 1;
+visibility: visible;
+}
+.trailler:target .content {
+opacity: 1;
+transform: translate(-50%, -50%) scale(1);
+}
+@media screen and (max-width: 968px) {
+.trailler .content{
+width: 640px;
+height: 360px;
+}
+}
+@media screen and (max-width: 645px) {
+.trailler .content{
+width: 400px;
+height: 225px;
+}
+}
+</style>
+  </head>
+  <body>
+    <section class="detail">
+      <div class="container">
+        <div class="poster-wrapper">
+          <div class="poster">
+            <img src="img/Wedding Agreement.jpg" alt="" />
+          </div>
+          <form action="#trailler">
+            <button type="submit" class="submit-button">
+                <i class="fa-regular fa-circle-play"></i>Watch Now</button>
+        </form>
+        <div id="trailler" class="trailler">
+            <div class="content">
+                <a href="#" class="close">&Cross;</a>
+                <iframe
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/f46vjiZ9sKs?si=mVdUslYLjZYLOYkI?autoplay=0&showinfo=0"
+                    frameborder="0"
+                    allowfullscreen="allowfullscreen"></iframe>
+            </div>
+        </div>
+        </div>
+
+        <div class="info">
+          <div class="movie-title">Wedding Agreement</div>
+          <div class="movie-detail">
+            <div class="set">
+              <label>Release Date</label>
+              <span>August 8, 2019</span>
+            </div>
+            <div class="set">
+              <label>Running Time</label>
+              <span>1 Hr 40 Min</span>
+            </div>
+            <div class="set">
+              <label>Genre</label>
+              <span>Romance / Drama</span>
+            </div>
+            <div class="set">
+              <label>IMDb Rating</label>
+              <span>
+                <i class="fas fa-star" style="margin-right: 10px"></i>6.8 /
+                10</span
+              >
+            </div>
+          </div>
+          <div class="movie-description">
+            Tari (Indah Permatasari) is immediately confronted with a marriage agreement with Bian (Refal Hady) which says that they would divorce within one year because their marriage is only for the sake of his parents.
+          </div>
+          <div class="movie-cast">
+            <div class="header">Movie Cast</div>
+            <table>
+              <tr>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/Aghniny Haque.jpg" alt="" />
+                    <label>Aghniny Haque</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/Refal Hady.jpg" alt="" />
+                    <label>Refal Hardy</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/Indah Permatasari.jpg" alt="" />
+                    <label>Indah Permatasari</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/fergie giovanna.jpg" alt="" />
+                    <label>Fergie Giovanna</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/ria ricis.jpg" alt="" />
+                    <label>Ria Ricis</label>
+                  </div>
+                </td>
+                <td>
+                  <div class="cast" style="margin: 10px">
+                    <img src="img/ibrahim rasyid.jpg" alt="" />
+                    <label>Ibrahim Rasyid</label>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="movielist" class="movielist">
+      <div class="container">
+        <div class="col">
+          <div class="title">
+            <h2>Recomendation</h2>
+          </div>
+          <div class="list fall-season">
+            <div class="card-anime">
+              <a href="../11endgame/index.html" target="content">
+                <img src="../11endgame/assets/avgr.jpg" alt="" />
+                <h6>Inception</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>8.8
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2010
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./3interstellar/assets/intr.jpg" alt="" />
+                <h6>Interstellar</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>8.7
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2014
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./4matrix/assets/tmrx.jpg" alt="" />
+                <h6>Matrix</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./5starwars5/assets/bg.jpg" alt="" />
+                <h6>Star Wars 5</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./6terminator2/assets/ter.jpg" alt="" />
+                <h6>Terminator 2</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./11endgame/assets/avgr.jpg" alt="" />
+                <h6>Avengers: Endgame</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./12eternal/assets/etrn.jpg" alt="" />
+                <h6>Eternal Sunshine Sunshine of the Spotless Mind</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./7starwars4/assets/stars4.jpg" alt="" />
+                <h6>Star Wars: Episode IV - A New Hope</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./10alien/assets/aln.jpg" alt="" />
+                <h6>Alien</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+            <div class="card-anime">
+              <a href="../sc-fi/10alien/index.html" target="content">
+                <img src="./13clockwork/assets/clock.jpg" alt="" />
+                <h6>A Clockwork Orange</h6>
+                <div class="detail">
+                  <ul style="display: flex; align-items: center">
+                    <li>
+                      <p style="margin-right: 10px">
+                        <i class="fas fa-star"></i>7.2
+                      </p>
+                    </li>
+                    <li>
+                      <p
+                        style="
+                          margin-right: 10px;
+                          background-color: rgba(234, 234, 234, 0.182);
+                          border-radius: 8px;
+                          padding: 2px 5px;
+                        "
+                      >
+                        2023
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
