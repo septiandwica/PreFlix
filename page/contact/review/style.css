@@ -43,8 +43,10 @@
 
 .center{
   position: absolute;
-  top: 35%;
-  left: 49%;
+  top: 38%;
+  left: 45%;
+  overflow: hidden;
+
   transform: translate(-50%, -50%);
 }
 .center .stars{
@@ -57,7 +59,7 @@
 }
 .stars label{
   float: right;
-  font-size: 100px;
+  font-size: 80px;
   color: lightgrey;
   margin: 0 5px;
   text-shadow: 1px 1px #bbb;
@@ -82,10 +84,10 @@
   position: absolute;
   content: "";
   width: 100%;
-  left: 50%;
+  left: 60%;
   transform: translateX(-47%);
-  bottom: -30px;
-  font-size: 30px;
+  top: 100px;
+  font-size: 25px;
   font-weight: 500;
   color: gold;
   font-family: 'Poppins', sans-serif;
@@ -115,7 +117,6 @@
 .wrapper {
 	background: whitesmoke;
 	padding: 2rem;
-	max-width: 576px;
 	width: 550px;
 	border-radius: .75rem;
 	box-shadow: var(--shadow);
@@ -170,6 +171,7 @@ textarea {
 	border-radius: .5rem;
 	border: none;
 	outline: none;
+  margin-top: 0px;
 	resize: none;
 	margin-bottom: .5rem;
 }
