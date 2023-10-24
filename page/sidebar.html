@@ -6,6 +6,106 @@
     <link rel="stylesheet" href="../src/css/sidebar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
+    <style>
+        div.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.btn a{
+    margin: 10px;
+    padding: 10px 12px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+        .trailler {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.5s;
+        }
+        .trailler .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.25);
+            width: 900px;
+            height: 506px;
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .trailler .content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0.25);
+            width: 400px;
+            height: 400px;
+            box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.381);
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .trailler .content .text {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin: 40px;
+        }
+        .trailler .content .text i {
+            font-size: 80px;
+            color: red;
+        }
+        .close,
+        .close:link,
+        .close:visited {
+            color: #ccc;
+            text-decoration: none;
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 40px;
+            display: inline-block;
+            line-height: 1;
+            transition: all 0.5s;
+        }
+        .close:hover {
+            color: rgb(155, 0, 0);
+        }
+        .trailler:target {
+            opacity: 1;
+            visibility: visible;
+            background-color: black;
+        }
+        .trailler:target .content {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+        @media screen and (max-width: 968px) {
+            .trailler .content {
+                width: 400px;
+                height: 350px;
+            }
+        }
+        @media screen and (max-width: 645px) {
+            .trailler .content {
+                width: 350px;
+                height: 400px;
+            }
+        }
+
+
+
+    </style>
 </head>
 <body>
     <header>
@@ -84,10 +184,29 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="navBar"  href="../index.html" target="_parent">
+                        <a class="navBar" id="signout" href="#trailler" target="content">
                             <i class="fas fa-sign-in-alt"></i>
                             <span class="nav-item">Sign-out</span>
                         </a>
+                        <div id="trailler" class="trailler">
+                            <div class="content">
+                                <a href="./home/index.html" class="close">&Cross;</a>
+                                <div class="text">
+                                    <i class="fas fa-triangle-exclamation" style="margin: 10px;"></i>
+                                    <h2 style="color: red;">Warning</h2>
+                                    <p style="text-align: justify; margin-top: 8px; margin-bottom: 8px;">
+    
+                                        Are you sure you want to sign out?</p>
+                                    <div class="btn">
+                                        <a class="btn" href="../index.html" target="_parent" style="background-color: red;">YES
+                                        </a>
+                                        <a class="btn" href="./home/index.html" style="background-color: black;" >NO
+                                        </a>
+                                    </div>
+    
+                                </div>
+                            </div>
+                        </div>
                     </li>
                 </ul>
         </nav>

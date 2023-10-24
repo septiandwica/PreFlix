@@ -59,7 +59,6 @@ nav ul li{
     line-height: 35px;
     max-height: 35px;
     transition: .5ms;
-    text-transform: capitalize;
 }
 nav ul li.user{
     max-height: 200px;
