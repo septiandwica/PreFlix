@@ -51,6 +51,8 @@
             .jumbotron .carousel img {
                 width: 20%;
                 float: left;
+                height: 125vh;
+        object-fit: cover;
             }
             @keyframes carousel {
                 0% {
@@ -179,6 +181,41 @@
             .jumbotron .form form button:active {
                 transform: scale(0.90);
             }
+            @media screen and (max-width: 1280px) {
+                .jumbotron .container .name,
+            .jumbotron .container .account{
+                flex-direction: column;
+            }
+            .jumbotron{
+                height: 125vh;
+            }
+            .jumbotron .container form{
+                background: rgba(0, 0, 0, 0.584);
+                width: 500px;
+                text-align: left;
+                margin-top: 150px;
+                height: 750px;
+                border-radius: 10px;
+            }
+            .jumbotron .container form .bottom{
+                display: flex;
+                flex-direction: column;
+                margin-left: 100px;
+            }
+            .jumbotron .container form .gender .form-group{
+                margin-bottom: 10px;
+                margin-right: 20px;
+            }
+            .jumbotron .container form .gender .form-group:nth-child(2) .form-dropdown{
+                width: 300px;
+                height: 30px;
+            }
+            .jumbotron .container form .bottom textarea{
+                width: 300px;
+                resize: none;
+                height: 70px;
+            }
+            }
 
             /* footer */
             footer.footer {
@@ -240,6 +277,7 @@
             .footer .copy a:hover {
                 color: rgb(144, 77, 77);
             }
+           
         </style>
     </head>
     <body>

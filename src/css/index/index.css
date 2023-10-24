@@ -87,6 +87,8 @@ div.btn a{
 .jumbotron .carousel img{
     width: 20%;
     float: left;
+    height: 100vh;
+    object-fit: cover;
 }
 @keyframes carousel {
     0%{
@@ -184,12 +186,6 @@ div.btn a{
         font-size: 16px;
         margin-bottom: 20px;
     }
-}
-@media screen and (max-width: 645px) {
-
-}
-@media screen and (max-width: 445px) {
-
 }
 
 /* hero */

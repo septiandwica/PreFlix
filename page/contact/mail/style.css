@@ -76,3 +76,17 @@ textarea.contact-form-text{
 form button:active {
     transform: scale(0.90);
 }
+@media screen and (max-width: 960px) {
+    
+    .contact-form-text{
+        width: 490px;
+
+    }
+}
+@media screen and (max-width: 445px) {
+    
+    .contact-form-text{
+        width: 300px;
+
+    }
+}
